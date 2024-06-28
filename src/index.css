@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.font-semibold {
+  outline: none;
+}
+
+/* Calendar */
+
+.calendar-container {
+  background-color: #27272a;
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto; /* Увеличьте отступы для лучшего визуального пространства вокруг календаря */
+  border-radius: 10px;
+}
+
+.react-calendar {
+  width: 100%;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.react-calendar__tile {
+  position: relative;
+}
+
+.react-calendar__navigation {
+  font-size: 20px;
+  text-align: center;
+  padding: 20px 0;
+  background-color: #ec4899;
+  border-bottom: 5px solid #db2777;
+  border-radius: 10px;
+}
+
+.react-calendar__navigation__prev-button, .react-calendar__navigation__next-button {
+  padding: 0 10px;
+  font-size: 25px;
+}
+
+.react-calendar__navigation__prev2-button, .react-calendar__navigation__next2-button {
+  visibility: hidden;
+}
+
+
+
+.react-calendar__month-view__weekdays__weekday {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  background-color: #3f3f46;
+  border: 1px solid #27272a;
+  border-top: none;
+}
+
+
+.react-calendar__month-view__days__day {
+  padding: 10px;
+}
+
+.react-calendar__month-view__days__day--neighboringMonth {
+  opacity: 40%;
+}
+
+.dot {
+  position: absolute;
+  bottom: 13px;
+  left: 62%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ec4899;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.react-calendar__tile--now abbr{
+  padding: 5px 10px 5px 10px;
+  background: #ec4899 !important;
+  color: white !important;
+  font-weight: bold;
+  border-radius: 50%;
+}
+
+
+/* Modal window */
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  marginRight: -50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+}
